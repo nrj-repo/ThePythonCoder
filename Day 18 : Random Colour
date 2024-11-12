@@ -1,0 +1,40 @@
+import random
+import turtle
+from turtle import Turtle, Screen
+
+turtle.colormode(255)
+
+def random_color():
+    r = random.randint(0,255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+    random_colors = (r,g,b)
+    return random_colors
+
+# colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray", "SeaGreen"]
+directions = [0,90,180,270]
+
+jimmy = Turtle()
+jimmy.pensize(15)
+jimmy.speed("fastest")
+for _ in range(200):
+    jimmy.color(random_color())
+    jimmy.forward(30)
+    jimmy.setheading(random.choice(directions))
+
+# def draw_shape(sides):
+#     angle = 360 / sides
+#     jimmy.color(random.choice(colours))
+#     for _ in range(sides):
+#         jimmy.forward(70)
+#         jimmy.right(angle)
+#
+# user_sides = int(input("No of sides required."))
+#
+# for user_side_n in range(3,11):
+#     draw_shape(user_side_n)
+
+
+
+screen = Screen()
+screen.exitonclick()
