@@ -1,0 +1,16 @@
+#Armstrong number
+
+original_number = input("enter the number to check Armstrong number: ")
+num_length = len(original_number)
+num = int(original_number)
+num_sum = 0
+
+while num > 0:
+    unit_digit = num%10
+    num = num//10
+    num_sum = num_sum + unit_digit**num_length
+
+if num_sum == int(original_number):
+    print(f"{original_number} is an Armstrong")
+else:
+    print(f"{original_number} is not an Armstrong")
