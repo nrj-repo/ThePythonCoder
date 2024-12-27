@@ -1,0 +1,5 @@
+#sum of natural numbers
+
+number = int(input("Enter the last natural number to calculate sum: "))
+natural_sum = (number * (number+1)) / 2
+print(f"SUM of {number} natural numbers is : {int(natural_sum)}")
